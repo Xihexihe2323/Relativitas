@@ -1,9 +1,9 @@
 * {
-    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam lebar dan tinggi elemen */
+    box-sizing: border-box;
 }
 
 body, html {
-    height: 100%; /* Mengatur tinggi body dan html 100% */
+    height: 100%;
     margin: 0;
 }
 
@@ -57,32 +57,33 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
-    height: calc(100% - 60px); /* Mengatur tinggi main agar mengisi sisa halaman, tanpa footer */
-    overflow-y: auto; /* Menambahkan scroll jika konten terlalu banyak */
+    height: calc(100% - 60px);
+    overflow-y: auto;
 }
 
 .flex-container {
     display: flex;
-    align-items: flex-start; /* Ubah agar teks dan gambar rata atas */
+    align-items: flex-start;
     margin-bottom: 40px;
 }
 
 .text-content {
-    flex: 1; /* Membuat teks mengisi ruang yang tersedia */
-    margin-right: 20px; /* Jarak antara teks dan gambar */
+    flex: 1;
+    margin-right: 20px;
+    max-width: 50%; /* Membatasi lebar maksimum teks pengantar */
 }
 
 .image-content {
-    flex: 0 0 300px; /* Lebar tetap untuk gambar */
+    flex: 0 0 300px;
     display: flex;
-    justify-content: flex-end; /* Menggeser gambar ke kanan */
+    justify-content: flex-end;
 }
 
 .image-content img {
     max-width: 100%;
-    height: auto; /* Mengatur tinggi gambar otomatis agar proporsional */
+    height: auto;
     border-radius: 10px;
-    margin-top: 20px; /* Menurunkan gambar */
+    margin-top: 20px;
 }
 
 section {
