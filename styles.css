@@ -74,13 +74,14 @@ main {
 }
 
 .image-content {
-    flex: 0 0 300px;
+    flex: 0 0 50%; /* Membuat lebar gambar sama dengan lebar teks pengantar */
     display: flex;
-    justify-content: flex-end;
+    justify-content: center; /* Menempatkan gambar di tengah kontainer */
+    margin-left: 20px; /* Margin kiri untuk sedikit menggeser ke kanan */
 }
 
 .image-content img {
-    max-width: 100%;
+    max-width: 90%; /* Menjaga proporsi gambar, mengurangi lebar sedikit */
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
