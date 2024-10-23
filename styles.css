@@ -1,8 +1,15 @@
+* {
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam lebar dan tinggi elemen */
+}
+
+body, html {
+    height: 100%; /* Mengatur tinggi body dan html 100% */
+    margin: 0;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background: radial-gradient(circle, #1e1e1e, #0b0b0b);
     color: #ffffff;
     font-size: 20px;
@@ -13,7 +20,6 @@ header {
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
-    position: relative;
 }
 
 .logo {
@@ -51,27 +57,30 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
+    height: calc(100% - 60px); /* Mengatur tinggi main agar mengisi sisa halaman, tanpa footer */
+    overflow-y: auto; /* Menambahkan scroll jika konten terlalu banyak */
 }
 
 .flex-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Ubah agar teks dan gambar rata atas */
     margin-bottom: 40px;
 }
 
 .text-content {
-    flex: 1;
+    flex: 1; /* Membuat teks mengisi ruang yang tersedia */
     margin-right: 20px; /* Jarak antara teks dan gambar */
 }
 
 .image-content {
     flex: 0 0 300px; /* Lebar tetap untuk gambar */
+    display: flex;
+    justify-content: flex-end; /* Menggeser gambar ke kanan */
 }
 
 .image-content img {
     max-width: 100%;
+    height: auto; /* Mengatur tinggi gambar otomatis agar proporsional */
     border-radius: 10px;
     margin-top: 20px; /* Menurunkan gambar */
 }
